@@ -1,0 +1,44 @@
+$autocomplete-list-container-max-height: 398px;
+$autocomplete-list-container-border-width: 1px;
+$autocomplete-list-container-border-color: #d4d4d4;
+$autocomplete-list-item-border-color: $autocomplete-list-container-border-color;
+$autocomplete-list-item-border-width: $autocomplete-list-container-border-width;
+$autocomplete-list-item-bg-color: #fff;
+$autocomplete-list-item-padding: 10px;
+$autocomplete-list-item-hover-bg-color: #f1f1f1;
+$autocomplete-list-active-bg-color: $autocomplete-list-item-hover-bg-color;
+
+  #taskListDropdownWrapper {
+    position: relative; 
+    display: inline-block;
+    width: 100%;
+  }
+  
+  .autocomplete-list-container {
+    position: absolute;
+    border: $autocomplete-list-container-border-width solid $autocomplete-list-container-border-color;
+    border-bottom: none;
+    border-top: none;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: $autocomplete-list-container-max-height;
+    overflow-y: auto;
+  }
+
+  .autocomplete-list-item {
+    padding: $autocomplete-list-item-padding;
+    cursor: pointer;
+    background-color: $autocomplete-list-item-bg-color; 
+    border-bottom: $autocomplete-list-container-border-width solid $autocomplete-list-container-border-color; 
+  }
+  
+  .autocomplete-list-item:hover {
+    background-color: $autocomplete-list-item-hover-bg-color;
+  }
+    
+  .autocomplete-active {
+    background-color: $autocomplete-list-active-bg-color;
+  }
+  

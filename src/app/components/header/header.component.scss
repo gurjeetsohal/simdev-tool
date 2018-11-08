@@ -1,0 +1,34 @@
+@import '../../../scss/variables';
+$navbar-toggler-icon-width: 1.2em;
+$navbar-toggler-icon-height: $navbar-toggler-icon-width;
+$user-icon-margin-right: 5px;
+
+.navbar{
+    height: $header-height;
+
+    .navbar-nav{
+        margin: auto;
+    }
+    
+    .navbar-toggler-icon{
+        width: $navbar-toggler-icon-width;
+        height: $navbar-toggler-icon-height;
+    }
+    
+    .user-name{
+        color: white;
+        .user-icon {
+            margin-right: $user-icon-margin-right;
+        }
+    }
+    
+}
+
+.navbar-dark {
+    & .navbar-toggler {
+        border: none;
+    }
+}
+
+
+

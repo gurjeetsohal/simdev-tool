@@ -1,0 +1,9 @@
+$section-header-padding: 3px 0;
+$section-border-color: black;
+$section-header-bottom-margin: 10px;
+
+.section-header{
+    padding: $section-header-padding;
+    margin-bottom: $section-header-bottom-margin;
+    margin-top: 10px;
+}

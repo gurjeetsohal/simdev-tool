@@ -1,0 +1,33 @@
+@import '../../../scss/variables';
+
+$label-width: 200px;
+$value-width: 300px;
+$settings-btn-width: 150px;
+$row-spacing: 30px;
+
+.main-area{
+    position: relative;
+    .user-settings-group{
+        margin-bottom: $row-spacing;
+        .user-settings-label{
+            width: $label-width;
+        }
+        .user-settings-val{
+            width: $value-width;
+        }
+    }
+      
+}
+
+.settings-btn-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.settings-btn {
+    width: $settings-btn-width;
+} 
+
+.main-area .user-settings-group.last-item {
+    margin-bottom: 0px;
+}

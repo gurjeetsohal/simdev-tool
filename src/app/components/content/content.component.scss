@@ -1,0 +1,15 @@
+@import '../../../scss/variables';
+
+$content-max-width: 900px;
+.content-area-parent{
+    position: relative;
+    top: $header-height;
+    left: $sidebar-width;
+    width: calc(100% - #{$sidebar-width});
+    padding: 20px 25px;
+    min-height: calc(100% - #{$header-height});
+    .content-area{
+        max-width: $content-max-width;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,11 @@
+<nav class="navbar-primary bg-light">
+  <ul class="navbar-primary-menu">
+    <li *ngFor='let item of menuItems; let last = last' [class.settings-menu]="last">
+      <a [routerLink] = "[{outlets: {'content-container': [item.link] }}]"
+          routerLinkActive #rla='routerLinkActive' [ngClass]='rla.isActive ? "active-link" : "" '>
+        <i [class]="'menu-icons'+ ' ' + 'fa' + ' ' + item.iconClass"></i>
+        <p class="nav-label">{{ item.name }}</p>
+      </a>
+    </li>
+  </ul>
+</nav>

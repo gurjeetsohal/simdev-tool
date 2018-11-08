@@ -1,0 +1,43 @@
+$btn-width: 160px;
+$grid-col-count: 2;
+$button-icons-margin-right: 15px;
+$grid-row-gap: 15px;
+$grid-col-gap: 10px;
+$btn-count: 4;
+
+.launch-btn {
+    width: $btn-width;
+}
+
+.btn-grid-container {
+    // display: grid;
+    // grid-template-columns: repeat($grid-col-count, 1fr);
+    // grid-row-gap: $grid-row-gap;
+    // grid-column-gap: $grid-col-gap;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.button-icons {
+    margin-right: $button-icons-margin-right;
+}
+.btn-container {
+    width: calc(100% / #{$grid-col-count} - #{$grid-col-gap} * #{$btn-count});
+    // text-align: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+}
+
+.btn-container:nth-child(odd) {
+    text-align: right;
+    margin-left: 25px;
+    margin-right: 20px;
+}
+
+.btn-container:nth-child(even) {
+    text-align: left;
+    
+}
+
+

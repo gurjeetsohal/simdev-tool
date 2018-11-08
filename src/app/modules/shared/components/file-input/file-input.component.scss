@@ -1,0 +1,12 @@
+$button-width: 75px;
+.file-input-root{
+    display: flex;
+}
+
+#custom-width-input{
+    width: calc(100% - #{$button-width});
+}
+
+#custom-width-btn{
+    width: $button-width
+}

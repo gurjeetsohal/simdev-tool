@@ -1,0 +1,14 @@
+<div class='task-tool-area'>
+  <app-section-heading [title]="'Task'"></app-section-heading>
+  <div class='card section-body bg-light'>
+    <app-taskid-input #taskidValue></app-taskid-input>
+    <div class='btn-grid-container'> 
+      <div class="btn-container" *ngFor='let buttonItem of buttonContent'>
+        <button class="launch-btn btn btn-info" (click)='this[buttonItem.method]()' [disabled]='buttonItem.text==="Jira"'>
+          <i [class]="'button-icons'+ ' ' + 'fa' + ' ' + buttonItem.iconClass"></i>
+          {{ buttonItem.text }}
+        </button>      
+    </div>  
+    </div>
+  </div>
+</div>

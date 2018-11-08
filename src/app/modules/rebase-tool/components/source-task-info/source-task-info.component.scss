@@ -1,0 +1,59 @@
+@import '../../../../../scss/variables';
+
+$label-width: 40%;
+$value-width: 60%;
+
+.task-info {
+  position: relative;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 10px;
+  padding-bottom: 20px;
+  padding-top: 30px;
+
+  .source-task-info-group {
+    display: flex;
+
+    .btn.btn-remove {
+      top: 0px;
+      right: 0px;
+      position: absolute;
+    }
+
+    .source-task-info-label {
+      width: $label-width;
+      display: inline-block;
+      &.input-description {
+        line-height: 1;
+        padding-left: 0px;
+        width: 100%;
+        margin-bottom: 0.5rem;
+        font-size: 90%
+      }
+    }
+
+    .source-task-info-val {
+      width: $value-width;
+      display: inline-block;
+
+      .radio-button {
+        width: 10%;
+      }
+
+      .task-type {
+        display: inline-flex;
+      }
+    }
+  }
+
+  .col-form-label-positioning {
+    position: relative;
+    top: -10px;
+  }
+
+  .col-form-label-task {
+    position: relative;
+    font-weight: 700;
+    top: -25px;
+  }
+}

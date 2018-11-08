@@ -1,0 +1,39 @@
+<div class="main-area">
+  <app-section-heading [title]="'Rebase Tool Inputs'"></app-section-heading>
+  <div class="card section-body">
+    <form>
+
+      <div class="destination-path form-group rebase-tool-group row">
+        <label class="rebase-tool-label col-form-label col-sm-4">Destination Path:</label>
+        <div class="rebase-tool-val col-sm-8">
+          <app-file-input #destinationPathRef [defaultFilePath]='destinationPath' [placeholderText]='placeholderText'></app-file-input>
+          <label class="rebase-tool-label input-description col-form-label">Please provide the path of the destination folder. Typically this should be the task folder path where the task.xml and assets should reside. </label>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="tasks-info">
+          <app-source-task-info  #taskInfo>
+            </app-source-task-info>
+      </div>
+
+      <hr />
+
+      <div class='rebase-tool-group'>
+        <button class='btn-lg btn-info rebase' (click)='rebaseSteps()'>Rebase</button>
+      </div>
+
+      <br />
+
+      <div class="tool-output form-group rebase-tool-group row">
+        <label class="rebase-tool-label col-form-label col-sm-4 tool-output-label">Tool Output:</label>
+        <div class="rebase-tool-val col-sm-8">
+          <textarea class="form-control" name='toolOutput' [(ngModel)]='toolOutput' id="tool-output" rows="2">
+          </textarea>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>

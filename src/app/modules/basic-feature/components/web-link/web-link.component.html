@@ -1,0 +1,12 @@
+<div class='web-links-area'>
+    <app-section-heading [title]="'Web Links'"></app-section-heading>
+    <div class='card section-body bg-light'>
+        <div class='web-links-grid-container'>
+            <div class='web-links-container' *ngFor='let link of webLinks'>
+                <div class='link-item' (click)='this[link.method]()'>
+                    {{ link.text }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

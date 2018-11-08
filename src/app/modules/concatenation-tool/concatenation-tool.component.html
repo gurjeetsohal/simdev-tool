@@ -1,0 +1,42 @@
+<div class="main-area">
+  <app-section-heading [title]="'Concatenation Tool Inputs'"></app-section-heading>
+  <div class="card section-body">
+    <form>
+
+      <div class="destination-path form-group concatenation-tool-group row">
+        <label class="concatenation-tool-label col-form-label col-sm-4">Destination Path:</label>
+        <div class="concatenation-tool-val col-sm-8">
+          <app-file-input #destinationPathRef [defaultFilePath]='destinationPath' [placeholderText]='placeholderText'></app-file-input>
+          <label class="concatenation-tool-label input-description col-form-label">Please provide the path of the destination folder. Typically this should be the task folder path where the task.xml and assets should reside. </label>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="steps-info" #stepsInfo >
+      </div>
+
+
+      <div class='concatenation-tool-group'>
+        <button class='btn-lg btn-info add' (click)='addStepInfo()'>Add Another Step</button>
+      </div>
+
+      <hr />
+
+      <div class='concatenation-tool-group'>
+        <button class='btn-lg btn-info concatenate' (click)='concatenateSteps()'>Concatenate</button>
+      </div>
+
+      <br />
+
+      <div class="tool-output form-group concatenation-tool-group row">
+        <label class="concatenation-tool-label col-form-label col-sm-4 tool-output-label">Tool Output:</label>
+        <div class="concatenation-tool-val col-sm-8">
+          <textarea class="form-control" name='toolOutput' [(ngModel)]='toolOutput' id="tool-output" rows="2">
+          </textarea>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>

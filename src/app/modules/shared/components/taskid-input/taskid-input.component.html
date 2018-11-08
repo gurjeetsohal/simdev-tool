@@ -1,0 +1,17 @@
+<div class='input-taskid'>
+  <form>
+      <div class="form-group row">
+            <label for="taskid" class="col-form-label col-sm-3 required">Enter Task / Template Id</label>
+            <div class="col-sm-8">
+                <div id='taskListDropdownWrapper'>
+                    <input type='text' class='form-control' required name="taskIdInput" [(ngModel)]='inputTaskId' placeholder="e.g. GO16.XL.10.10A.02.A1 or XL-18" (keydown)="focusAttributeListItem($event)" (focusout)="closeDropdown()"/>
+                    <div *ngIf='showDropdownList' class='autocomplete-list-container' #filteredTaskIDList>
+                        <div (click)="validateTaskId(taskId)" class="autocomplete-list-item" *ngFor="let taskId of filteredTaskIds | filter:inputTaskId">
+                            <a>{{taskId}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      </div>
+  </form>
+</div>

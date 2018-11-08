@@ -1,0 +1,80 @@
+@import '../../../scss/variables';
+$space-between-menu-icon-and-text: 12px;
+$menu-icon-left-margin-collapsed-state: 10px;
+$menu-horizontal-padding: 16px;
+$menu-vertical-padding: $menu-horizontal-padding;
+$menu-border-width: 1px;
+$menu-border-color: rgba(0,0,0,.1);
+$menu-text-color: black;
+$menu-hover-background-color: rgba(0,0,0,0.1);
+$menu-active-background-color: rgba(0,0,0,0.1);
+$menu-icons-color: $menu-text-color;
+$setting-menu-bottom-offset: 64px;
+$navbar-border-right-color: rgba(0,0,0,.1);
+
+.navbar-primary {
+    height: 100%;
+    left: 0px;
+    top: $header-height;
+    position: fixed;
+    width: $sidebar-width;
+    transition: width 0s ease-in-out;
+    border-right: 1px solid $navbar-border-right-color;
+
+    & .nav-label {
+      display: inline;
+    }
+  }
+  
+  .navbar-primary.collapsed {
+    width: $sidebar-collapsed-width;
+
+    & .nav-label {
+      display: none;
+    }
+
+    & .menu-icons {
+      margin-left: $menu-icon-left-margin-collapsed-state;
+    }
+  }
+
+  .navbar-primary-menu {
+    margin:0; 
+    padding:0;
+    list-style: none;
+  }
+
+  .navbar-primary-menu li {
+    margin:0; 
+    padding:0;
+    list-style: none;
+
+    & a {
+      display: block;
+      padding: $menu-vertical-padding $menu-horizontal-padding;
+      text-align: left;
+      border-bottom: $menu-border-width solid $menu-border-color;
+      color: $menu-text-color;
+
+      &:hover {
+        background-color: $menu-hover-background-color;
+        text-decoration: none;
+      }
+
+      &.active-link {
+        background-color: $menu-active-background-color;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .menu-icons {
+    margin-right: $space-between-menu-icon-and-text;
+    color: $menu-icons-color;
+  }
+
+  .settings-menu {
+    position: absolute;
+    bottom: $setting-menu-bottom-offset;
+    width: 100%;
+  }
